@@ -1,18 +1,41 @@
-<h1>{{title}}</h1>
-<div class="find-plot-div">
-  <div id="garden-blog-description" *ngFor="let plot of secretPlots" >
-    <h3 >{{plot.plotName}}</h3>
-    <h4>{{plot.description}}</h4>
-    <h4>Plot Stats</h4>
-    <ul>
-      <li>plot size: {{plot.plotSize}}</li>
-      <li *ngFor="let produce of plot.produce">{{produce}}</li>
-    </ul>
-    <h4>Plot Blog</h4>
-    <div class="blog" *ngFor="let blog of plot.blog">
-      <p>{{blog.plotter}}</p>
-      <blockquote >{{blog.message}}</blockquote>
+<div class="find-plot-div container">
+  <h1>{{title}}</h1>
+  <div class="jumbotron" id="garden-blog-description" *ngFor="let plot of secretPlots" >
+    <div class="row">
+      <div class="col-sm-6">
+        <img src={{plot.imgUrl}} alt={{plot.plotName}} />
+      </div>
+      <!-- left col -->
+      <div class="col-sm-6">
+        <h3 >{{plot.plotName}}</h3>
+        <h4>{{plot.description}}</h4>
+        <br>
+        <a href='http://maps.google.com/maps/preview/@{{plot.latitude}},{{plot.longitude}},15z' target="_blank"><h4>Get directions</h4></a>
+
+        <!-- http://maps.google.com/@-45.470266,-122.720072,8z
+        https://www.google.com/maps/preview/@-15.623037,18.388672,8z -->
+        <br>
+        <h4>Plot Stats</h4>
+        <ul>
+          <li>plot size: {{plot.plotSize}}</li>
+          <li *ngFor="let produce of plot.produce">{{produce}}</li>
+        </ul>
+      </div>
+      <!-- right col -->
     </div>
+    <!-- row -->
+    <div class="row">
+      <hr>
+      <h4>Plot Blog</h4>
+      <div class="well">
+        <div class="blog" *ngFor="let blog of plot.blog">
+          <h4>{{blog.plotter}}</h4>
+          <blockquote >{{blog.message}}</blockquote>
+        </div>
+      </div>
+      <!-- well -->
+    </div>
+    <!-- row -->
   </div>
   <!-- garden-blog-description-->
 </div>

@@ -1,0 +1,29 @@
+{
+  "name": "secret-plot",
+  "description": "Web-app that game-ifies guerrilla gardening with map functionality, garden plot creation and gardening blog",
+  "main": "",
+  "authors": [
+    "Maggie Harrington",
+    "Carlos Munoz Kampff"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "2",
+    "google",
+    "maps",
+    "api"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
