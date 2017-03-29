@@ -1,3 +1,19 @@
-<h1>
-  {{title}}
-</h1>
+<h1>{{title}}</h1>
+<div class="find-plot-div">
+  <div id="garden-blog-description" *ngFor="let plot of secretPlots" >
+    <h3 >{{plot.plotName}}</h3>
+    <h4>{{plot.description}}</h4>
+    <h4>Plot Stats</h4>
+    <ul>
+      <li>plot size: {{plot.plotSize}}</li>
+      <li *ngFor="let produce of plot.produce">{{produce}}</li>
+    </ul>
+    <h4>Plot Blog</h4>
+    <div class="blog" *ngFor="let blog of plot.blog">
+      <p>{{blog.plotter}}</p>
+      <blockquote >{{blog.message}}</blockquote>
+    </div>
+  </div>
+  <!-- garden-blog-description-->
+</div>
+<!-- find-plot-div -->
