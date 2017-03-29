@@ -28,25 +28,20 @@ Web-app that game-ifies guerrilla gardening with map functionality, garden plot 
 * HTML
 * CSS
 * JavaScript
+* Angular-CLI
 * jQuery
 * Bootstrap
 * git
 * GoogleMapsAPI
 
-## Copyright (c)
-* 2017 Maggie Harrington, Stephanie Spears, Carlos Munoz Kampff
-
-## License
-* MIT
-
 ## Development Planning for version 2.0 (Angular-CLI port)
-|Objective | Strategy |
-|----------|----------|
-|1) Display a list of garden-plots. | Use a constructor in component and display us ngFor data binding|
-|2) Create CRUD functionality for garden-plots. | Use data-binding and show-hide forms |
-|3) Create user interface and functionality for tracking watering of plot. | Use `this.currentTime.getDate()` and a function in the back end and a button with (click) binding.|
-|4) Color changes to describe watering status. | Use [class] binding. |
-|5) Different kinds of plots appear by neighbourhood. | ? |
+|Status|Objective | Strategy |
+|----------|----------||----------
+|Done|1) Display a list of garden-plots. | Use a constructor in component and display us ngFor data binding|
+|ToDo|2) Create CRUD functionality for garden-plots. | Use data-binding and show-hide forms |
+|ToDo|3) Create user interface and functionality for tracking watering of plot. | Use `this.currentTime.getDate()` and a function in the back end and a button with (click) binding.|
+|ToDo|4) Color changes to describe watering status. | Use [class] binding. |
+|ToDo|5) Different kinds of plots appear by neighbourhood. | ? |
 
 
 ## Specifications from version 1.0
@@ -59,6 +54,13 @@ Web-app that game-ifies guerrilla gardening with map functionality, garden plot 
 |5) User chooses to login to existing account. | click on "login" and enter correct pre-existing info | User is greeted and page is updated to acknowledge login status.|
 |6) User is prompted to retry login. | click on "login" and enter incorrect username and password. | User is informed of login fail and is informed to try again.|
 |7) User chooses to "plant a message" in the garden blog. | click on "plant a message" and input name and message. | message and name prepend the blog showing history of previous blog-posts.|
+
+## Copyright (c)
+* 2017 Maggie Harrington, Stephanie Spears, Carlos Munoz Kampff
+
+## License
+* MIT
+
 *end specifications for MVP
 
 
