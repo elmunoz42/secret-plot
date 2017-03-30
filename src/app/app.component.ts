@@ -9,6 +9,8 @@ import { GardenPlotComponent } from './garden-plot/garden-plot.component'
 })
 export class AppComponent {
   title = 'Secret Plot 2.0';
+  lat: number = 45.470266;
+  lng: number = -122.720072;
 
   secretPlots: SecretPlot[] = [
   new SecretPlot("Gabriel Community Orchard", 45.470266, -122.720072, 'Located adjacent to Gabriel Community Garden at 4151 SW Canby St in Southwest Portland, Gabriel Community Orchard is home to more than 40 mature fruit trees, the perfect orchard for any apple lover. ', 'big', [' apples', ' other'], [{plotter: 'Bob', message:'Im way down here!'},{plotter: 'Tina', message: 'Ya me too!'}], "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUiQPVyWWRBCg7hBAIb98v39Q2b8npwOvrlmNczALdtdw_yJ2Aqw"),

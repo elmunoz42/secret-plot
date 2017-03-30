@@ -1,3 +1,11 @@
+<div>
+  <sebm-google-map [latitude]="lat" [longitude]="lng">
+  <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
+  <sebm-google-map-marker *ngFor="let plot of secretPlots" [latitude]="plot.latitude" [longitude]="plot.longitude" [label]="'M'">
+     </sebm-google-map-marker>
+</sebm-google-map>
+</div>
+
 <div class="find-plot-div container">
   <h1>{{title}}</h1>
   <div class="jumbotron" id="garden-blog-description" *ngFor="let plot of secretPlots" >
