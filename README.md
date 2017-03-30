@@ -14,8 +14,8 @@ Web-app that game-ifies guerrilla gardening with map functionality, garden plot 
 * Clone project
 * Open index.html
 
-## See this page on GitHub.io
-[https://elmunoz42.github.io/secretPlottersProject/](https://elmunoz42.github.io/secretPlottersProject/)
+## See this page at this URL
+<!-- TODO -->
 
 
 ## Known Bugs
@@ -36,7 +36,7 @@ Web-app that game-ifies guerrilla gardening with map functionality, garden plot 
 
 ## Development Planning for version 2.0 (Angular-CLI port)
 |Status|Objective | Strategy |
-|----------|----------||----------
+|----------|----------|----------|
 |Done|1) Display a list of garden-plots. | Use a constructor in component and display us ngFor data binding|
 |ToDo|2) Create CRUD functionality for garden-plots. | Use data-binding and show-hide forms |
 |ToDo|3) Create user interface and functionality for tracking watering of plot. | Use `this.currentTime.getDate()` and a function in the back end and a button with (click) binding.|
@@ -44,7 +44,7 @@ Web-app that game-ifies guerrilla gardening with map functionality, garden plot 
 |ToDo|5) Different kinds of plots appear by neighbourhood. | ? |
 
 
-## Specifications from version 1.0
+## Specifications from version 1.0 to Port over.
 |Desired Behavior | Example Input | Example Output |
 |:----------------|:-------------:|---------------:|
 |1) User chooses to find a secretPlot and is shown a map| click on "find a secretPlot" | display: map with secretPlot locations|

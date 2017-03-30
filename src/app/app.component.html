@@ -1,9 +1,14 @@
-<div>
-  <sebm-google-map [latitude]="lat" [longitude]="lng">
-  <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
-  <sebm-google-map-marker *ngFor="let plot of secretPlots" [latitude]="plot.latitude" [longitude]="plot.longitude" [label]="'M'">
-     </sebm-google-map-marker>
-</sebm-google-map>
+<div class="container">
+  <div class="col-sm-6">
+    <sebm-google-map [latitude]="lat" [longitude]="lng">
+      <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
+      <sebm-google-map-marker *ngFor="let plot of secretPlots" [latitude]="plot.latitude" [longitude]="plot.longitude" [label]="'M'">
+      </sebm-google-map-marker>
+    </sebm-google-map>
+  </div>
+  <div class="col-sm-6">
+    <h1>SecretPlot</h1>
+  </div>
 </div>
 
 <div class="find-plot-div container">
