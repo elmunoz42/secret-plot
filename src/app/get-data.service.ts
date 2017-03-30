@@ -19,4 +19,14 @@ export class GetDataService {
   addPlot(newPlot: SecretPlot) {
     this.secretPlots.push(newPlot);
   }
+
+  // TODO: integrate dynamic pages and update plot and blog.
+  // getPlotById(plotId: string) {
+  //   return this.angularFire.database.object('/secretPlots/' + plotId);
+  // }
+  //
+  // updatePlot(localUpdatedPlot) {
+  //   var plotEntryInFirebase = this.getPlotById(localUpdatedPlot.$key);
+  //   plotEntryInFirebase.update({localUpdatedPlot.blog});
+  // }
 }

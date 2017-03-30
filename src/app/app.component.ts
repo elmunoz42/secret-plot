@@ -38,6 +38,11 @@ export class AppComponent implements OnInit {
     this.dataService.addPlot(newPlot);
   }
 
+  // TODO create update function
+  // beginUpdatingPlot(plotToUpdate){
+  //   this.dataService.updatePlot(plotToUpdate);
+  // }
+
 }
 
 export class SecretPlot {
@@ -45,7 +50,6 @@ export class SecretPlot {
   // wateringStatus: number = 0;
   constructor(public plotName: string, public latitude: number, public longitude: number, public description: string, public plotSize: string, public produce: string[], public blog: any, public imgUrl: string) {}
 
-  // TODO add imgUrl: string to constructor and get images.
   // TODO create function watering Status here.
 
 }
