@@ -13,7 +13,10 @@ export class GetDataService {
   secretPlots: FirebaseListObservable<any[]>;
 
   fetchData(){
-
     return this.secretPlots;
+  }
+
+  addPlot(newPlot: SecretPlot) {
+    this.secretPlots.push(newPlot);
   }
 }

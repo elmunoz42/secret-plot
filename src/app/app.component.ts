@@ -33,11 +33,16 @@ export class AppComponent implements OnInit {
 
   }
 
+  submitForm(plotName: string, latitude: any, longitude: any, description: string, plotSize: string, produce: string[], imgUrl: string) {
+    var newPlot: SecretPlot = new SecretPlot(plotName, parseFloat(latitude), parseFloat(longitude), description, plotSize, ["vegetable"], [{plotter: 'Bob', message:'test'},{plotter: 'Tina', message: 'tester'}], imgUrl);
+    this.dataService.addPlot(newPlot);
+  }
+
 }
 
 export class SecretPlot {
 
-  wateringStatus: number = 0;
+  // wateringStatus: number = 0;
   constructor(public plotName: string, public latitude: number, public longitude: number, public description: string, public plotSize: string, public produce: string[], public blog: any, public imgUrl: string) {}
 
   // TODO add imgUrl: string to constructor and get images.
