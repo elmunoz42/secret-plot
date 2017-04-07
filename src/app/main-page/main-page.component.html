@@ -1,0 +1,104 @@
+<div class="row">
+  <div id="map" class="col-sm-6">
+    <sebm-google-map [latitude]="lat" [longitude]="lng">
+      <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
+      <sebm-google-map-marker *ngFor="let plot of secretPlots" [latitude]="plot.latitude" [longitude]="plot.longitude" [label]="'M'" (click)="test()">
+      </sebm-google-map-marker>
+    </sebm-google-map>
+  </div>
+  <div class="col-sm-6">
+    <h1>Add Plot</h1>
+    <p>
+      lat lon: 45.517560, -122.680035
+    </p>
+    <div class="well form-group">
+      <div>
+        <label>Plot Name:</label>
+        <br>
+        <input #plotName>
+      </div>
+
+      <div>
+        <label>Latitude:</label>
+        <br>
+        <input #latitude >
+      </div>
+
+      <div>
+        <label>Longitude:</label>
+        <br>
+        <input #longitude >
+      </div>
+
+      <div>
+        <label>Description:</label>
+        <br>
+        <textarea rows="4" cols="70" #description></textarea>
+      </div>
+
+      <div>
+        <label>Plot Size:</label>
+        <br>
+        <input #plotSize>
+      </div>
+
+      <div>
+        <label>Produce:</label>
+        <br>
+        <input #produce>
+      </div>
+
+      <div>
+        <label>Image URL:</label>
+        <br>
+        <input #imgUrl>
+      </div>
+
+      <button (click)="submitForm(plotName.value, latitude.value, longitude.value, description.value, plotSize.value, produce.value, imgUrl.value); plotName.value=''; latitude.value=''; longitude.value=''; description.value=''; plotSize.value=''; produce.value=''; imgUrl.value=''">Add</button>
+
+    </div>
+    <!-- well -->
+  </div>
+  <!-- col -->
+</div>
+
+<div class="find-plot-div">
+  <div class="jumbotron" id="garden-blog-description" *ngFor="let plot of secretPlots" >
+    <div class="row">
+      <div class="col-sm-6">
+        <img src={{plot.imgUrl}} alt={{plot.plotName}} />
+        <h3>{{plot.$key}}</h3>
+      </div>
+      <!-- left col -->
+      <div class="col-sm-6">
+        <h3 >{{plot.plotName}}</h3>
+        <h4>{{plot.description}}</h4>
+        <br>
+
+        <a href='https://www.google.com/maps/dir/{{plot.latitude}},{{plot.longitude}}/45.517560,-122.680035' target="_blank"><h4>Get directions</h4></a>
+        <br>
+        <h4>Plot Stats</h4>
+        <ul>
+          <li>plot size: {{plot.plotSize}}</li>
+          <li *ngFor="let produce of plot.produce">{{produce}}</li>
+        </ul>
+      </div>
+      <!-- right col -->
+    </div>
+    <!-- row -->
+    <div class="row">
+      <hr>
+      <h4>Plot Blog</h4>
+      <div class="well">
+        <div class="blog" *ngFor="let blog of plot.blog">
+          <h4>{{blog.plotter}}</h4>
+          <blockquote >{{blog.message}}</blockquote>
+        </div>
+      </div>
+      <!-- well -->
+    </div>
+    <!-- row -->
+  </div>
+  <!-- END FOR LOOP-->
+</div>
+<!-- find-plot-div -->

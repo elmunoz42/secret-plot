@@ -1,6 +1,9 @@
 
 <div class="container">
-  <h1>{{title}}</h1>
+  <div class="row">
+    <h1>{{title}}</h1>
+  </div>
+  <!-- row -->
   <div class="row">
     <div id="map" class="col-sm-6">
       <sebm-google-map [latitude]="lat" [longitude]="lng">
@@ -77,8 +80,7 @@
           <h3 >{{plot.plotName}}</h3>
           <h4>{{plot.description}}</h4>
           <br>
-          <!-- <a href='http://maps.google.com/?q="{{plot.plotName}}"@{{plot.latitude}},{{plot.longitude}},16z' target="_blank"><h4>Get directions</h4></a> -->
-          <a href='http://maps.google.com/maps/preview/@{{plot.latitude}},{{plot.longitude}},16z' target="_blank"><h4>Get directions</h4></a>
+          <a href='https://www.google.com/maps/dir/45.444683,-122.677194/{{plot.latitude}},{{plot.longitude}},16z' target="_blank"><h4>Get directions</h4></a>
           <br>
           <h4>Plot Stats</h4>
           <ul>

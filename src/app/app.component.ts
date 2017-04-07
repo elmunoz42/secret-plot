@@ -12,11 +12,6 @@ import { GetDataService } from './get-data.service';
 })
 export class AppComponent implements OnInit {
   secretPlots;
- //
- // constructor(af: AngularFire, ) {
- //   this.items = af.database.list('/items');
- //   console.log(this.items);
- // }
 
   constructor(private dataService: GetDataService ) {}
   title = 'Secret Plot 2.0';
